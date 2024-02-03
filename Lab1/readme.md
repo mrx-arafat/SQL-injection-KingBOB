@@ -81,6 +81,7 @@ The payload that solved the lab and achieved the objective of revealing all prod
 
 The successful payload works by breaking out of the application's intended SQL query structure and injecting our own logic that always evaluates to true. By appending `--`, we ensure the original query's remaining parts are ignored by the database, effectively bypassing any filters the application intended to apply.
 
+Open Burp Suite, cz i fixed the proxy here with burpsuite
 
 ` $ python -u "h:\bug Bountry\Web\SQL injection\Lab1\sql script.py" "https://0a20007e04b26508881fc4df00f900ae.web-security-academy.net/filter?category=" "'or 1=1--"    `
 
